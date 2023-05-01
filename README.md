@@ -1,6 +1,6 @@
 <div align="center">
 
-<a target="_blank" href="https://yune-dev.vercel.app">
+<a target="_blank" href="https://yune.vercel.app">
     <img alt='Website' src="./public/blog/hello_world/screenshot.png" />
 </a>
 

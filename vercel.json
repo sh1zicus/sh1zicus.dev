@@ -1,7 +1,7 @@
 {
 	"$schema": "https://openapi.vercel.sh/vercel.json",
 	"version": 2,
-	"alias": "yune.dev",
+	"alias": "yune-dev.vercel.app",
 	"cleanUrls": true,
 	"public": true,
 	"regions": ["lhr1"],

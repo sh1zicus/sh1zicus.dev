@@ -1,5 +1,5 @@
 const isProduction = process.env.NODE_ENV === 'production';
-const domain = isProduction ? 'yune-3ht4h4med-nulloneguy.vercel.app' : 'localhost:3000';
+const domain = isProduction ? 'yune-dev.vercel.app' : 'localhost:3000';
 const protocol = isProduction ? 'https' : 'http';
 
 /**

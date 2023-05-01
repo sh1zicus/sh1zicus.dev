@@ -71,7 +71,7 @@ export default function HomePage(): JSX.Element {
 							opacity: [0, 1],
 							scale: [0.75, 1],
 						}}
-						className="text-gray-500 dark:text-white text-5xl sm:text-6xl md:text-6xl lg:text-8xl tracking-tight font-extrabold">
+						className="text-gray-500 dark:text-white text-2xl xs:text-3xl sm:text-4xl md:text-6xl lg:text-8xl tracking-tight font-extrabold">
 						Привет <span className="inline-block origin-70 hover:(animate-wave)">👋</span>{' '}
 						я Иван, <br className="hidden sm:block" />
 						<Pill.Standard className="mt-4">веб разработчик</Pill.Standard>
@@ -90,7 +90,7 @@ export default function HomePage(): JSX.Element {
 						{description}
 					</Animate>
 
-					<div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-4 space-y-4 sm:space-y-0 w-full mt-8 sm:mt-4">
+					<div className="flex flex-col lg:flex-row items-center justify-center lg:space-x-4 space-y-4 lg:space-y-0 w-full mt-8 lg:mt-4">
 						{ACTIONS.map((action, index) => {
 							if (action.type !== NavigationItemType.LINK) return null;
 							return (

@@ -127,7 +127,7 @@ webpack: (config, { dev, isServer }) => {
 
 Используя Lanyard, я смог создать виджет статуса и компонент(ы) индикатора, что означает, что пока я онлайн в Discord, любой может посмотреть, что я слушаю в Spotify, в какую игру играю или даже что я пишу, благодаря расширению Visual Studio Code, которое добавляет богатое присутствие в Discord.
 
-![Status Widget in action](/blog/hello_world/lanyard.gif 'Status Widget in action')
+![Status Widget in action](/blog/hello_world/lanyard.png 'Status Widget in action')
 
 <XButton href="/status" icon="feather:external-link" label="Перейти к статусу" />
 

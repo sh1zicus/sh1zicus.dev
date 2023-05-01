@@ -1,8 +1,8 @@
 {
 	"private": true,
-	"name": "yune.dev",
+	"name": "yune-dev.vercel.app",
 	"version": "0.0.1",
-	"description": "Personal Website for yune.dev",
+	"description": "Personal Website",
 	"repository": "https://github.com/yune/yune.dev.git",
 	"author": "yuneguy <yuneguy@ya.ru>",
 	"license": "MIT",

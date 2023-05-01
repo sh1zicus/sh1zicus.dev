@@ -14,16 +14,16 @@ export function useSeoProps(
 	return {
 		title,
 		description,
-		canonical: `https://yune.dev/${router.asPath}`,
+		canonical: `https://yune-dev.vercel.app/${router.asPath}`,
 		openGraph: {
 			title,
 			description,
 			site_name: 'yune',
-			url: `https://yune.dev/${router.asPath}`,
+			url: `https://yune-dev.vercel.app/${router.asPath}`,
 			type: 'website',
 			images: [
 				{
-					url: 'https://yune.dev/banner.png',
+					url: 'https://yune-dev.vercel.app/banner.png',
 					alt: description,
 					width: 1280,
 					height: 720,

@@ -1,0 +1,18 @@
+{
+	"$schema": "https://openapi.vercel.sh/vercel.json",
+	"version": 2,
+	"alias": "yune.dev",
+	"cleanUrls": true,
+	"public": true,
+	"regions": ["lhr1"],
+	"redirects": [
+		{ "source": "/github", "destination": "https://github.com/yuneguy" },
+		{ "source": "/portfolio", "destination": "/projects" },
+		{ "source": "/resume", "destination": "/resume" },
+		{ "source": "/telegram", "destination": "https://t.me/yuneguy" },
+		{
+			"source": "/contact",
+			"destination": "https://t.me/yuneguy"
+		}
+	]
+}

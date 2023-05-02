@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"name": "yune.vercel.app",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"description": "Personal Website",
 	"repository": "https://github.com/yune/yune.dev.git",
 	"author": "yuneguy <yuneguy@ya.ru>",

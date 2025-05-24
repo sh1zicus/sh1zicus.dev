@@ -17,7 +17,7 @@ export function ErrorLayout({ children, seo }: DefaultLayoutProps): JSX.Element 
 	return (
 		<>
 			<NextSeo {...seoProps} />
-			<main className="flex flex-col justify-center px-8">
+			<main className="flex flex-col justify-center px-8 min-h-screen">
 				<div className="relative h-screen pt-20 sm:pt-16 pb-20 px-4 sm:px-6 lg:pb-28 lg:px-8">
 					{children}
 				</div>

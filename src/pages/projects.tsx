@@ -15,16 +15,33 @@ interface ProjectProps {
 export const getStaticProps: GetStaticProps<ProjectProps> = async () => {
 	const projects = await fetchProjects();
 
+	// Return empty array if projects is null
 	return {
 		props: {
-			stringifiedProjects: JSON.stringify(projects),
+			stringifiedProjects: JSON.stringify(projects || []),
 		},
 		revalidate: 3600,
 	};
 };
 
 export default function ProjectsPage({ stringifiedProjects }: ProjectProps): JSX.Element {
-	const projects = JSON.parse(stringifiedProjects) as Array<Project>;
+	const projects = JSON.parse(stringifiedProjects) as Array<Project> | null;
+
+	if (!projects || projects.length === 0) {
+		return (
+			<Layout.Default seo={{ title: 'yune ─ проекты' }}>
+				<div className="my-24 mx-2 sm:mx-6 lg:mb-28 lg:mx-8">
+					<div className="relative max-w-xl mx-auto">
+						<List.Container>
+							<div className="text-center py-8">
+								<p className="text-gray-500 dark:text-gray-400">Не удалось загрузить проекты. Пожалуйста, попробуйте позже.</p>
+							</div>
+						</List.Container>
+					</div>
+				</div>
+			</Layout.Default>
+		);
+	}
 
 	return (
 		<Layout.Default seo={{ title: 'yune ─ проекты' }}>

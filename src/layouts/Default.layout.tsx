@@ -29,7 +29,7 @@ export function DefaultLayout({
 		<>
 			<NextSeo {...seo} />
 			<Navbar.Standard />
-			<main className="flex flex-col justify-center px-8">
+			<main className="flex flex-col justify-center px-8 min-h-screen">
 				{showBackground && <Background />}
 				{children}
 			</main>

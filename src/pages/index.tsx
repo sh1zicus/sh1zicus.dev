@@ -58,7 +58,26 @@ export default function HomePage(): JSX.Element {
 	const isBirthday =
 		today.getDate() === birthday.getDate() && today.getMonth() === birthday.getMonth();
 
-	const description = `Мне ${age} лет, я frontend разработчик из России/Новосибирск, безработный`;
+	const getAgeString = (years: number): string => {
+		const lastDigit = years % 10;
+		const lastTwoDigits = years % 100;
+
+		if (lastTwoDigits >= 11 && lastTwoDigits <= 19) {
+			return `${years} лет`;
+		}
+
+		if (lastDigit === 1) {
+			return `${years} год`;
+		}
+
+		if (lastDigit >= 2 && lastDigit <= 4) {
+			return `${years} года`;
+		}
+
+		return `${years} лет`;
+	};
+
+	const description = `Мне ${getAgeString(age)}, я frontend разработчик из России/Новосибирск, безработный`;
 
 	return (
 		<Layout.Default>

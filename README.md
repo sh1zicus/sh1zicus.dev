@@ -16,7 +16,7 @@
 Clone the repository
 
 ```zsh
-git clone https://github.com/sh1zicus/yune.dev.git
+git clone https://github.com/sh1zicus/sh1zicus.dev.git
 ```
 
 Install dependencies

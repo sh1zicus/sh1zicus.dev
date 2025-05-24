@@ -8,6 +8,9 @@ export enum ListActionType {
 interface ListActionBaseProps {
 	icon: string;
 	label: string;
+	showCounts?: boolean;
+	stars?: number;
+	forks?: number;
 }
 
 export type ListAction =

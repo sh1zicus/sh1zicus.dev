@@ -112,6 +112,8 @@ export interface Project {
 	language?: string;
 	name: string;
 	post?: string;
+	stars?: number;
+	forks?: number;
 	template?: boolean;
 	url: string;
 }

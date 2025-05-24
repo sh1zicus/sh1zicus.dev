@@ -3,6 +3,8 @@ import { fetchProjects } from '~/lib/projects';
 import { Layout } from '~/layouts';
 import { Animate, List } from '~/components';
 import { ListActionType } from '~/types';
+import { Icon } from '@iconify/react';
+import clsx from 'clsx';
 
 import type { GetStaticProps } from 'next';
 
@@ -55,10 +57,11 @@ export default function ProjectsPage({ stringifiedProjects }: ProjectProps): JSX
 								transition={{
 									delay: 0.1 * index,
 								}}>
-								<List.Item
-									actions={[
-										...(project.post
-											? [
+								<div className="w-full">
+									<List.Item
+										actions={[
+											...(project.post
+												? [
 													{
 														type: ListActionType.LINK,
 														external: false,
@@ -66,29 +69,51 @@ export default function ProjectsPage({ stringifiedProjects }: ProjectProps): JSX
 														icon: 'feather:edit-3',
 														label: `Blog post about ${project.name}`,
 													} as ListAction,
-											  ]
-											: []),
-										...(project.homepage
-											? [
+												]
+												: []),
+											...(project.homepage
+												? [
 													{
 														type: ListActionType.LINK,
 														href: project.homepage,
 														icon: 'feather:home',
 														label: `${project.name} homepage`,
 													} as ListAction,
-											  ]
-											: []),
-										{
-											type: ListActionType.LINK,
-											href: project.url,
-											icon: 'feather:github',
-											label: 'GitHub Repository',
-										},
-									]}
-									description={project.description}
-									icon={<span className="text-xl">{project.icon}</span>}
-									title={project.name}
-								/>
+												]
+												: []),
+											{
+												type: ListActionType.LINK,
+												href: project.url,
+												icon: 'feather:github',
+												label: 'GitHub',
+											},
+										]}
+										description={project.description}
+										icon={<span className="text-xl">{project.icon}</span>}
+										title={project.name}
+									>
+										<div className="w-full">
+											<div className="flex justify-end pr-8 -mt-3 mb-1">
+												{(project.stars !== undefined || project.forks !== undefined) && (
+													<div className="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400">
+														{project.stars !== undefined && (
+															<div className="flex items-center">
+																<Icon icon="mdi:star" className="text-yellow-500 mr-1" />
+																<span>{project.stars}</span>
+															</div>
+														)}
+														{project.forks !== undefined && (
+															<div className="flex items-center">
+																<Icon icon="mdi:source-branch" className="text-gray-500 mr-1" />
+																<span>{project.forks}</span>
+															</div>
+														)}
+													</div>
+												)}
+											</div>
+										</div>
+									</List.Item>
+								</div>
 							</Animate>
 						))}
 					</List.Container>

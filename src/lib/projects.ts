@@ -59,6 +59,7 @@ export async function fetchProjects(): Promise<Array<Project> | null> {
 
 			return {
 				description,
+				homepage: repo.homepage ?? undefined,
 				icon: ((): string => {
 					if (!repo.description) return undefined;
 
@@ -66,9 +67,10 @@ export async function fetchProjects(): Promise<Array<Project> | null> {
 
 					return emojiRegex().test(char) ? char : undefined;
 				})(),
-				homepage: repo.homepage ?? undefined,
 				name: repo.name,
 				post: repoPost ? `/blog/${repoPost.post}` : undefined,
+				stars: repo.stargazers_count,
+				forks: repo.forks_count,
 				template: false,
 				url: repo.html_url.toLowerCase(),
 			} as Project;

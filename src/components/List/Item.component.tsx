@@ -11,7 +11,7 @@ import type { ListAction, WithChildren } from '~/types';
 
 interface ItemProps extends WithChildren {
 	actions?: Array<ListAction>;
-	description?: string;
+	description?: string | ReactNode;
 	icon?: string | ReactNode;
 	iconColor?: string;
 	title: string;
@@ -65,8 +65,8 @@ export function Item({
 											aria-label={action.label}
 											key={index}
 											onClick={action.onClick}>
+											<Icon icon={action.icon} className="w-5 h-5" />
 											<span className="sr-only">{action.label}</span>
-											<Icon className="mt-1" icon={action.icon} />
 										</Action>
 									);
 								case ListActionType.LINK:
@@ -79,9 +79,27 @@ export function Item({
 												key={index}
 												onClick={action.onClick}
 												rel="noopener noreferrer"
-												target="_blank">
+												target="_blank"
+												className="flex items-center space-x-2"
+											>
+												<Icon icon={action.icon} className="w-5 h-5" />
 												<span className="sr-only">{action.label}</span>
-												<Icon className="mt-1" icon={action.icon} />
+												{action.showCounts && (
+													<div className="flex items-center ml-1 space-x-2 text-xs text-gray-500 dark:text-gray-400">
+														{action.stars !== undefined && (
+															<div className="flex items-center">
+																<Icon icon="mdi:star" className="text-yellow-500 mr-0.5" />
+																<span>{action.stars}</span>
+															</div>
+														)}
+														{action.forks !== undefined && (
+															<div className="flex items-center">
+																<Icon icon="mdi:source-branch" className="text-gray-500 mr-0.5" />
+																<span>{action.forks}</span>
+															</div>
+														)}
+													</div>
+												)}
 											</Action>
 										);
 
@@ -92,8 +110,8 @@ export function Item({
 												aria-label={action.label}
 												key={index}
 												onClick={action.onClick}>
+												<Icon icon={action.icon} className="w-5 h-5" />
 												<span className="sr-only">{action.label}</span>
-												<Icon className="mt-1" icon={action.icon} />
 											</Action>
 										</Link>
 									);

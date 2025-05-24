@@ -4,15 +4,29 @@
 	"alias": "yune.vercel.app",
 	"cleanUrls": true,
 	"public": true,
-	"regions": ["lhr1"],
+	"regions": [
+		"lhr1"
+	],
 	"redirects": [
-		{ "source": "/github", "destination": "https://github.com/yuneguy" },
-		{ "source": "/portfolio", "destination": "/projects" },
-		{ "source": "/cv", "destination": "/resume" },
-		{ "source": "/telegram", "destination": "https://t.me/yuneguy" },
+		{
+			"source": "/github",
+			"destination": "https://github.com/sh1zicus"
+		},
+		{
+			"source": "/portfolio",
+			"destination": "/projects"
+		},
+		{
+			"source": "/cv",
+			"destination": "/resume"
+		},
+		{
+			"source": "/telegram",
+			"destination": "https://t.me/sh1zicus"
+		},
 		{
 			"source": "/contact",
-			"destination": "https://t.me/yuneguy"
+			"destination": "https://t.me/sh1zicus"
 		}
 	]
 }

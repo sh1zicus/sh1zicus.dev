@@ -29,25 +29,25 @@ const ACTIONS: Array<NavigationItem> = [
 		icon: <Icon className="mr-3" icon="feather:copy" />,
 		text: 'Проекты',
 	},
-  {
+	{
 		type: NavigationItemType.LINK,
 		href: '/cv',
 		icon: <Icon className="mr-3" icon="feather:briefcase" />,
 		text: 'Резюме',
 	},
-  {
+	{
 		type: NavigationItemType.LINK,
-		href: 'https://t.me/yuneguy',
+		href: 'https://t.me/sh1zicus',
 		icon: <Icon className="mr-3" icon="feather:send" />,
 		text: 'Telegram',
-    external: true,
+		external: true,
 	},
 	{
 		type: NavigationItemType.LINK,
-		href: 'https://github.com/yuneguy',
+		href: 'https://github.com/sh1zicus',
 		icon: <Icon className="mr-3" icon="feather:github" />,
 		text: 'GitHub',
-    external: true,
+		external: true,
 	},
 ];
 

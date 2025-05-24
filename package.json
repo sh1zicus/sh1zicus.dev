@@ -4,7 +4,7 @@
 	"version": "1.0.0",
 	"description": "Personal Website",
 	"repository": "https://github.com/yune/yune.dev.git",
-	"author": "yuneguy <yuneguy@ya.ru>",
+	"author": "sh1zicus <sh1zicus@ya.ru>",
 	"license": "MIT",
 	"prettier": {
 		"arrowParens": "always",

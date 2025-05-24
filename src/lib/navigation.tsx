@@ -45,28 +45,28 @@ const staticMenuItems: Array<Array<NavigationItem>> = [
 			type: NavigationItemType.LINK,
 			icon: 'feather:send',
 			text: 'Телеграм',
-			href: 'https://t.me/yuneguy',
+			href: 'https://t.me/sh1zicus',
 			external: true,
 		},
-    {
+		{
 			type: NavigationItemType.LINK,
 			icon: 'feather:user',
 			text: 'Вконтакте',
 			href: 'https://vk.com/che_tam_s_bashkoj',
 			external: true,
 		},
-    {
+		{
 			type: NavigationItemType.LINK,
 			icon: 'feather:git-pull-request',
 			text: 'Codeberg',
-			href: 'https://codeberg.org/yuneguy',
+			href: 'https://codeberg.org/sh1zicus',
 			external: true,
 		},
 		{
 			type: NavigationItemType.LINK,
 			icon: 'feather:github',
 			text: 'GitHub',
-			href: 'https://github.com/yuneguy',
+			href: 'https://github.com/sh1zicus',
 			external: true,
 		},
 	],
@@ -85,15 +85,15 @@ export function useNavigation(): {
 		...staticMenuItems,
 		...(!loading && status.discord_status !== 'offline'
 			? [
-					[
-						{
-							type: NavigationItemType.LINK,
-							icon: <Status.Indicator color={color} pulse />,
-							text: 'Статус',
-							href: '/status',
-						} as NavigationItem,
-					],
-			  ]
+				[
+					{
+						type: NavigationItemType.LINK,
+						icon: <Status.Indicator color={color} pulse />,
+						text: 'Статус',
+						href: '/status',
+					} as NavigationItem,
+				],
+			]
 			: []),
 	];
 
